@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'screen_6_7_signup.dart';
 import 'screen_8_9_signin.dart';
+import 'screen_2_3_4_carousel.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home:CarousalScreen()
+      //  MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
