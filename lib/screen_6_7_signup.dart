@@ -8,101 +8,15 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
-    return
-        // Scaffold(
-        //     body: Stack(
-        //   children: [
-        //     Image(fit:BoxFit.fill,
-        //         image: AssetImage("assets/Screen-06.png"),
-        //       ),
-
-        //   ],
-        // )
-
-        //     //   Container(
-        //     // decoration: BoxDecoration(
-        //     //     image: DecorationImage(
-        //     //         image: AssetImage("assets/Screen-06.png"), fit: BoxFit.cover)),
-        //     // child: Column(
-        //     //   mainAxisAlignment: MainAxisAlignment.end,
-        //     //   crossAxisAlignment: CrossAxisAlignment.start,
-        //     //   children: [
-        //     //     Column(
-        //     //       children: [
-        //     //         Image(
-        //     //           image: AssetImage("assets/Screen-06.png"),
-        //     //         ),
-        //     //       ],
-        //     //     )
-        //     //   ],
-        //     // ),
-        //     // )
-        //     );
-
-        // // return MaterialApp(
-        // //   home: Container(
-        // //     decoration: BoxDecoration(
-        // //         image: DecorationImage(image: AssetImage("assets/Screen-06.png"))),
-        // //     child: Scaffold(
-        //         backgroundColor: Colors.transparent,
-        //         body: Padding(
-        //           padding: EdgeInsets.all(10),
-        //           child:
-
-        //               // Column(children: [
-
-        //               //   Image(fit:BoxFit.cover,
-        //               //       image: AssetImage("assets/Screen-06 (1).png"),
-        //               //     ),
-        //               //     Text("Sign up!",style:TextStyle(fontSize: 18,color:Colors.white))
-        //               // ],
-        //               // )
-        //         //       ListView(
-        //         //     children: [
-        //         //       Container(
-        //         //         child: Image(
-        //         //           fit: BoxFit.cover,
-        //         //           image: AssetImage("assets/Screen-06 (1).png"),
-        //         //         ),
-        //         //       ),
-        //         //       Text("Sign up!",
-        //         //           style: TextStyle(fontSize: 18, color: Colors.white))
-        //         //     ],
-        //         //   ),
-        //         // )
-        //         //  Column(
-        //         //   mainAxisAlignment: MainAxisAlignment.start,
-        //         //   children: [
-        //         //     Container(
-        //         //       height: 250,
-        //         //       width: 250,decoration: BoxDecoration(
-        //         //         image: DecorationImage(fit: BoxFit.cover,image: AssetImage("assets/Screen-06 (1).png"))
-        //         //       ),
-        //         //       // child: Image(
-        //         //       //   image: ,
-        //         //       // ),
-        //         //     ),
-
-        //         //     Text("Sign up!",
-        //         //         style: TextStyle(
-        //         //           color: Colors.white,
-        //         //           fontSize: 18,
-        //         //         )),
-        //         //     // Text("Hello world", style: TextStyle(color: Colors.white))
-        //         //   ],
-        //         // )
-        //         ),
-        //   ),
-        // );
-
-        Scaffold(
+    return Scaffold(
       body: Stack(
         children: [
           Image(
             fit: BoxFit.cover,
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            image: AssetImage("assets/Screen-06.png"),
+            image: AssetImage("assets/Screen-06 (2).png"),
+            // image: AssetImage("assets/Screen-06.png"),
           ),
           Container(
             child: SingleChildScrollView(
@@ -110,8 +24,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Image(image: AssetImage("assets/11.png"),),
-                  SizedBox(height: 180),
+                  SizedBox(height: 165),
                   Center(
                     child: Text(
                       "Sign up!",
@@ -134,7 +47,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   BorderSide(width: 2, color: Colors.white))),
                     ),
                   ),
-
                   Padding(
                     padding:
                         const EdgeInsets.only(left: 24, right: 24.0, top: 10),
