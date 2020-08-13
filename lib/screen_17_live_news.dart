@@ -39,14 +39,17 @@ class _LiveNewsScreenState extends State<LiveNewsScreen> {
                   Container(
                       // color: Colors.blue,
                       decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey,
-                                spreadRadius: 1,
-                                blurRadius: 2)
-                          ],
-                          image: DecorationImage(
-                              fit: BoxFit.cover, image: NetworkImage(link))),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius: 1,
+                              blurRadius: 2)
+                        ],
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(link),
+                        ),
+                      ),
                       width: MediaQuery.of(context).size.width,
                       height: MediaQuery.of(context).size.height / 3.8),
                   Positioned(

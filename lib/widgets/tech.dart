@@ -1,3 +1,5 @@
+// This fiile has the widget which is to be displayed then we click on the tech in top navigation bar.
+
 import 'package:flutter/material.dart';
 
 Widget tech(context) {

@@ -1,3 +1,5 @@
+// This fiile has the widget which is to be displayed then we click on the Sports in top navigation bar.
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

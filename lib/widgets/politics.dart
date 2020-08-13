@@ -1,3 +1,5 @@
+// This fiile has the widget which is to be displayed then we click on the Politics in top navigation bar.
+
 import 'package:flutter/material.dart';
 
 Widget politics(context) {

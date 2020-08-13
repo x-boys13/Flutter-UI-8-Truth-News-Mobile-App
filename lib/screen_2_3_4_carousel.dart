@@ -10,13 +10,8 @@ class CarousalScreen extends StatefulWidget {
 }
 
 class _CarousalScreenState extends State<CarousalScreen> {
-  // snackbar for allow button
-  final snackBar =
-      SnackBar(content: Text("You will recieve the notifications"));
-
-  // snackbar for allow button
-  final snackBar2 =
-      SnackBar(content: Text("You will not recieve the notifications"));
+  // Variable string for changing the text
+  String snackBarText = "";
 
   // Alertdialog box showing
   showAlertDialog(BuildContext context) {
@@ -37,7 +32,12 @@ class _CarousalScreenState extends State<CarousalScreen> {
             Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
               FlatButton(
                 onPressed: () {
-                  Scaffold.of(context).showSnackBar(snackBar2);
+                  setState(() {
+                    snackBarText = "You will not recive notifications.";
+                  });
+                  Navigator.of(context).pop();
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => NewsItems(snackBarText)));
                 },
                 child: Text(
                   "DENY",
@@ -49,10 +49,12 @@ class _CarousalScreenState extends State<CarousalScreen> {
               SizedBox(width: 10),
               FlatButton(
                 onPressed: () {
+                  setState(() {
+                    snackBarText = "You will recive notifications.";
+                  });
                   Navigator.of(context).pop();
-                  Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => NewsItems()));
-                  Scaffold.of(context).showSnackBar(snackBar);
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => NewsItems(snackBarText)));
                 },
                 child: Text(
                   "ALLOW",
@@ -98,7 +100,6 @@ class _CarousalScreenState extends State<CarousalScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          
           // Backgroung image
           Image(
             fit: BoxFit.cover,
