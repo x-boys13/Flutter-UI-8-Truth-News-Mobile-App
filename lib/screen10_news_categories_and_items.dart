@@ -1,12 +1,15 @@
 // This screen is dealing with the bottom navigation bar which has four options.
 
+import 'package:custom_navigator/custom_navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'screen_11_sports.dart';
 import 'screen_19_profile.dart';
 import 'screen_18_liked.dart';
 import 'screen_17_live_news.dart';
+import 'screen_13_14_daily news.dart';
 
+// TODO:Snackbar to be shown
 class NewsItems extends StatefulWidget {
   // NewsItems({Key key}):super(key:key);
   String snackBarText;
@@ -22,6 +25,7 @@ class _NewsItemsState extends State<NewsItems> {
   Widget _pageWidget;
   _NewsItemsState(this.snackBarText);
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
   void showInSnackBar(String value) {
     print(value);
@@ -39,6 +43,7 @@ class _NewsItemsState extends State<NewsItems> {
   ];
 
   void _onItemTapped(int index) {
+    print("Tapped");
     setState(() {
       _selectItem = index;
     });
@@ -71,15 +76,6 @@ class _NewsItemsState extends State<NewsItems> {
     }
   }
 
-  final List<String> _listitems = [
-    "https://images.unsplash.com/photo-1426024084828-5da21e13f5dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1587372723630-cc6f6f661cdc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1587614382346-4ec70e388b28?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1587614222350-286dd1a0e619?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1564697259644-03cd5e7363fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "https://images.unsplash.com/photo-1589353834625-b47ec0875dce?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-  ];
-
   void initState() {
     super.initState();
     WidgetsBinding.instance
@@ -88,60 +84,144 @@ class _NewsItemsState extends State<NewsItems> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CustomScaffold(
+      scaffold: Scaffold(
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white30,
+        //   elevation: 0,
+        //   leading: Icon(Icons.menu, color: Colors.black),
+        //   actions: [Icon(Icons.search, color: Colors.black)],
+        //   centerTitle: true,
+        //   title: Text(screenTitle,
+        //       style: TextStyle(
+        //           fontWeight: FontWeight.w800,
+        //           fontSize: 24,
+        //           color: Colors.black)),
+        // ),
+        key: _scaffoldKey,
         bottomNavigationBar: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
-                icon: FaIcon(
-                  FontAwesomeIcons.home,
-                ),
+                activeIcon:
+                    FaIcon(FontAwesomeIcons.home, color: Colors.purple[800]),
+                icon: FaIcon(FontAwesomeIcons.home, color: Colors.grey[600]),
                 title: Container()
                 // Text("Home", style: TextStyle(color: Colors.white),),
                 ),
             BottomNavigationBarItem(
-                icon: FaIcon(
-                  FontAwesomeIcons.playCircle,
-                ),
+                activeIcon: FaIcon(FontAwesomeIcons.playCircle,
+                    color: Colors.purple[800]),
+                icon: FaIcon(FontAwesomeIcons.playCircle,
+                    color: Colors.grey[600]),
                 title: Container()
                 // Text("ipone", style: TextStyle(color: Colors.black,),),
                 ),
             BottomNavigationBarItem(
-                icon: FaIcon(
-                  FontAwesomeIcons.heart,
-                ),
+                activeIcon:
+                    FaIcon(FontAwesomeIcons.heart, color: Colors.purple[800]),
+                icon: FaIcon(FontAwesomeIcons.heart, color: Colors.grey[600]),
                 title: Container()
                 // Text("Home", style: TextStyle(color: Colors.black),),
                 ),
             BottomNavigationBarItem(
+                activeIcon: FaIcon(
+                  FontAwesomeIcons.userCircle,
+                  color: Colors.purple[800],
+                ),
                 icon: FaIcon(
                   FontAwesomeIcons.userCircle,
+                  color: Colors.grey[600],
                 ),
                 title: Container()
                 // Text("Home", style: TextStyle(color: Colors.transparent)),
                 ),
+            BottomNavigationBarItem(
+                activeIcon:
+                    FaIcon(FontAwesomeIcons.clock, color: Colors.purple[800]),
+                icon: FaIcon(FontAwesomeIcons.clock, color: Colors.grey[600]),
+                title: Container()
+                // Text("Home", style: TextStyle(color: Colors.black),),
+                ),
           ],
-          currentIndex: _selectItem,
-          selectedItemColor: Colors.purple[800],
-          unselectedItemColor: Colors.grey.withOpacity(0.8),
-          onTap: _onItemTapped,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
+          // backgroundColor: Colors.purple,
+          // fixedColor: Colors.red,
+          // currentIndex: _selectItem,fixedColor: null,
+          // selectedItemColor: Colors.purple[800],
+          // unselectedItemColor: Colors.grey.withOpacity(0.8),
+          // onTap: _onItemTapped,
+          // showSelectedLabels: false,
+          // showUnselectedLabels: false,
         ),
-        key: _scaffoldKey,
-        appBar: AppBar(
-          backgroundColor: Colors.white30,
-          elevation: 0,
-          leading: Icon(Icons.menu, color: Colors.black),
-          actions: [Icon(Icons.search, color: Colors.black)],
-          centerTitle: true,
-          title: Text(screenTitle,
-              style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 24,
-                  color: Colors.black)),
-        ),
+        // body: Center(
+        //   child: _widgetOptions.elementAt(_selectItem),
+        // )
         body: Center(
           child: _widgetOptions.elementAt(_selectItem),
-        ));
+        ),
+      ),
+      children: [
+        SportsScreen(),
+        LiveNewsScreen(),
+        LikedScreen(),
+        ProfileScreen("Profile"),
+        DailyNews(),
+      ],
+    );
   }
 }
+
+// return Scaffold(
+//     bottomNavigationBar: BottomNavigationBar(
+//       items: [
+//         BottomNavigationBarItem(
+//             icon: FaIcon(
+//               FontAwesomeIcons.home,
+//             ),
+//             title: Container()
+//             // Text("Home", style: TextStyle(color: Colors.white),),
+//             ),
+//         BottomNavigationBarItem(
+//             icon: FaIcon(
+//               FontAwesomeIcons.playCircle,
+//             ),
+//             title: Container()
+//             // Text("ipone", style: TextStyle(color: Colors.black,),),
+//             ),
+//         BottomNavigationBarItem(
+//             icon: FaIcon(
+//               FontAwesomeIcons.heart,
+//             ),
+//             title: Container()
+//             // Text("Home", style: TextStyle(color: Colors.black),),
+//             ),
+//         BottomNavigationBarItem(
+//             icon: FaIcon(
+//               FontAwesomeIcons.userCircle,
+//             ),
+//             title: Container()
+//             // Text("Home", style: TextStyle(color: Colors.transparent)),
+//             ),
+//       ],
+//       currentIndex: _selectItem,
+//       selectedItemColor: Colors.purple[800],
+//       unselectedItemColor: Colors.grey.withOpacity(0.8),
+//       onTap: _onItemTapped,
+//       showSelectedLabels: false,
+//       showUnselectedLabels: false,
+//     ),
+//     key: _scaffoldKey,
+//     appBar: AppBar(
+//       backgroundColor: Colors.white30,
+//       elevation: 0,
+//       leading: Icon(Icons.menu, color: Colors.black),
+//       actions: [Icon(Icons.search, color: Colors.black)],
+//       centerTitle: true,
+//       title: Text(screenTitle,
+//           style: TextStyle(
+//               fontWeight: FontWeight.w800,
+//               fontSize: 24,
+//               color: Colors.black)),
+//     ),
+//     body: Center(
+//       child: _widgetOptions.elementAt(_selectItem),
+//     ));

@@ -10,17 +10,31 @@ class _LikedScreenState extends State<LikedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: [SizedBox(height:5),
-        listItem(1),
-        SizedBox(height: 5),
-        listItem(0),
-        SizedBox(height: 5),
-        listItem(1),
-        SizedBox(height: 5),
-        listItem(0),
-      ],
-    ));
+      body: ListView(
+        children: [
+          SizedBox(height: 5),
+          listItem(1),
+          SizedBox(height: 5),
+          listItem(0),
+          SizedBox(height: 5),
+          listItem(1),
+          SizedBox(height: 5),
+          listItem(0),
+        ],
+      ),
+      appBar: AppBar(
+        backgroundColor: Colors.white30,
+        elevation: 0,
+        leading: Icon(Icons.menu, color: Colors.black),
+        actions: [Icon(Icons.search, color: Colors.black)],
+        centerTitle: true,
+        title: Text("Live news",
+            style: TextStyle(
+                fontWeight: FontWeight.w800,
+                fontSize: 24,
+                color: Colors.black)),
+      ),
+    );
   }
 
   Widget listItem(number) {
@@ -34,7 +48,7 @@ class _LikedScreenState extends State<LikedScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left:8,right: 8.0),
+                    padding: const EdgeInsets.only(left: 8, right: 8.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -286,7 +300,7 @@ class _LikedScreenState extends State<LikedScreen> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left:8,right: 8.0),
+                    padding: const EdgeInsets.only(left: 8, right: 8.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,

@@ -36,8 +36,11 @@ class _CarousalScreenState extends State<CarousalScreen> {
                     snackBarText = "You will not recive notifications.";
                   });
                   Navigator.of(context).pop();
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => NewsItems(snackBarText)));
+                  Navigator.of(context).pushReplacement(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          NewsItems(snackBarText)));
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => NewsItems(snackBarText)));
                 },
                 child: Text(
                   "DENY",
@@ -53,8 +56,20 @@ class _CarousalScreenState extends State<CarousalScreen> {
                     snackBarText = "You will recive notifications.";
                   });
                   Navigator.of(context).pop();
-                  Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => NewsItems(snackBarText)));
+                  // Navigator.of(context).push(MaterialPageRoute(
+                  //     builder: (context) => NewsItems(snackBarText)));
+
+                  // This sorks such that back button is not working
+                  // Navigator.pushAndRemoveUntil(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //       builder: (context) => NewsItems(snackBarText)),
+                  //   (Route<dynamic> route) => false,
+                  // );
+
+                  Navigator.of(context).pushReplacement(new MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          NewsItems(snackBarText)));
                 },
                 child: Text(
                   "ALLOW",

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_8_truth_new_mobile_app/screen_2_3_4_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -63,7 +64,10 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   SizedBox(height: 18),
                   FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,MaterialPageRoute(builder: (_)=>CarousalScreen()));
+
+                    },
                     child: Ink(
                       child: Padding(
                         padding: const EdgeInsets.fromLTRB(91, 16, 91, 16),

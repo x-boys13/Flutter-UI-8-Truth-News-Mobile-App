@@ -18,12 +18,24 @@ class _SportsScreenState extends State<SportsScreen> {
     setState(() {
       super.initState();
       print("Selected");
-      _pageWidget = world();
+      _pageWidget = Center(
+        child: Container(
+          child: Center(
+            child: Text("No widget for politics developed 101"),
+          ),
+        ),
+      );
     });
   }
 
   String _pageChanger = "World";
-  Widget _pageWidget = world();
+  Widget _pageWidget = Center(
+    child: Container(
+      child: Center(
+        child: Text("No widget for politics developed 101"),
+      ),
+    ),
+  );
   final List<String> _listitems = [
     "https://images.unsplash.com/photo-1426024084828-5da21e13f5dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
     "https://images.unsplash.com/photo-1587372723630-cc6f6f661cdc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
@@ -77,13 +89,24 @@ class _SportsScreenState extends State<SportsScreen> {
         ),
         _pageWidget
       ],
-    ));
+    ),appBar: AppBar(
+          backgroundColor: Colors.white30,
+          elevation: 0,
+          leading: Icon(Icons.menu, color: Colors.black),
+          actions: [Icon(Icons.search, color: Colors.black)],
+          centerTitle: true,
+          title: Text("World",
+              style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 24,
+                  color: Colors.black)),
+        ),);
   }
 
   Future<Widget> returning() async {
     // ignore: await_only_futures
     setState(() {
-      _pageWidget = world();
+      _pageWidget = world(context);
     });
 
     return _pageWidget;
@@ -98,7 +121,7 @@ class _SportsScreenState extends State<SportsScreen> {
               print("Selected");
               setState(() {
                 _pageChanger = "World";
-                _pageWidget = world();
+                _pageWidget = world(context);
               });
             }
             break;
@@ -106,7 +129,13 @@ class _SportsScreenState extends State<SportsScreen> {
             {
               setState(() {
                 _pageChanger = "Politics";
-                _pageWidget = politics(context);
+                _pageWidget = Center(
+                  child: Container(
+                    child: Center(
+                      child: Text("No widget for politics developed 101"),
+                    ),
+                  ),
+                );
               });
             }
             break;
@@ -151,7 +180,7 @@ class _SportsScreenState extends State<SportsScreen> {
             {
               setState(() {
                 _pageChanger = "World";
-                _pageWidget = world();
+                _pageWidget = world(context);
               });
             }
             break;
