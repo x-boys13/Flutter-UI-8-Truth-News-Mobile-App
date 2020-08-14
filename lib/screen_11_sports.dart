@@ -104,7 +104,6 @@ class _SportsScreenState extends State<SportsScreen> {
   }
 
   Future<Widget> returning() async {
-    // ignore: await_only_futures
     setState(() {
       _pageWidget = world(context);
     });

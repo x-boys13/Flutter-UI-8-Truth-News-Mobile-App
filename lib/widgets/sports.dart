@@ -17,7 +17,10 @@ Widget sports(context) {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height / 3.3,
               color: Colors.transparent,
-              child: ListView(
+              child: 
+              
+              // This widget hold the horizontal scrollable widgets
+              ListView(
                 scrollDirection: Axis.horizontal,
                 children: [
                   horizontalListItems(context),
@@ -31,6 +34,8 @@ Widget sports(context) {
               ),
             ),
           ),
+
+          // These are te vertical scrollable widgets
           verticalListItems(context),
           SizedBox(
             height: 10,
@@ -49,6 +54,8 @@ Widget sports(context) {
   );
 }
 
+
+// Items which are there in horizontal scroll view
 Widget horizontalListItems(context) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(0, 0, 17, 0),
@@ -102,6 +109,7 @@ Widget horizontalListItems(context) {
   );
 }
 
+// Items which are there in vertical scroll view
 Widget verticalListItems(context) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(15, 15, 15, 0),

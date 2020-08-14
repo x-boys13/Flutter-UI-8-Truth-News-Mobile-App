@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ui_8_truth_new_mobile_app/screen_2_3_4_carousel.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// Signin screen for the app
 class SignInScreen extends StatefulWidget {
   @override
   _SignInScreenState createState() => _SignInScreenState();

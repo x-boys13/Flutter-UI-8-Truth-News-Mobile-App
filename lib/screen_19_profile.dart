@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+
+// Profile screen which opens when we click on profile icon in bottom navigation bar
 class ProfileScreen extends StatefulWidget {
   String appBarText;
   ProfileScreen(this.appBarText);
@@ -28,21 +30,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              // Container(
-              //   height: MediaQuery.of(context).size.height / 3.5,
-              //   width: MediaQuery.of(context).size.width,
-              //   // width: 120,
-              // decoration: BoxDecoration(
-              //   color: Colors.red,
-              //   borderRadius: BorderRadius.circular(4),
-              //   boxShadow: [
-              //     BoxShadow(color: Colors.grey, blurRadius: 2),
-              //   ],
-              // ),
-              // ),
               Stack(children: [
                 Container(
-                    // color: Colors.yellow,
                     child: Column(
                       children: [
                         Container(
@@ -60,7 +49,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               BoxShadow(color: Colors.grey, blurRadius: 4),
                             ],
                           ),
-                          // color: Colors.pink
                         )
                       ],
                     ),
@@ -70,7 +58,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     top: 200,
                     child: Container(
                         color: Colors.transparent,
-                        // decoration: BoxDecoration(image: DecorationImage(image: Net)),
                         width: MediaQuery.of(context).size.width,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -110,7 +97,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             "https://png.pngtree.com/png-vector/20190321/ourmid/pngtree-vector-users-icon-png-image_856952.jpg"),
                       ),
                     ),
-                    // color: Colors.red,
                     width: 100,
                     height: 100,
                   ),

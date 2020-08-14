@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_8_truth_new_mobile_app/screen_2_3_4_carousel.dart';
 
+// Signup screen for the app
 class SignUpScreen extends StatefulWidget {
   @override
   _SignUpScreenState createState() => _SignUpScreenState();

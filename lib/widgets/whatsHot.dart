@@ -1,5 +1,24 @@
 import 'package:flutter/material.dart';
 
+// The widget displayed when whats hot is chosen from top navigation bar under daily news option.
+Widget whatsHot(BuildContext context) {
+  return Container(
+    child: Container(
+      height: MediaQuery.of(context).size.height / 1.44,
+      width: MediaQuery.of(context).size.width,
+      child: ListView(
+        children: [
+          verticalListItems(context),
+          verticalListItems(context),
+          verticalListItems(context),
+          verticalListItems(context)
+        ],
+      ),
+    ),
+  );
+}
+
+// Items which are displayed inside the whats hot screen
 Widget verticalListItems(context) {
   return Padding(
     padding: const EdgeInsets.fromLTRB(15, 0, 0, 0),
@@ -76,8 +95,9 @@ Widget verticalListItems(context) {
                                 ],
                               ),
                               Padding(
-                                padding: const EdgeInsets.only(top:4.0),
-                                child: Icon(Icons.share,color:Colors.purple[800]),
+                                padding: const EdgeInsets.only(top: 4.0),
+                                child: Icon(Icons.share,
+                                    color: Colors.purple[800]),
                               )
                             ],
                           ),
@@ -99,23 +119,6 @@ Widget verticalListItems(context) {
                   )),
             ),
           )
-        ],
-      ),
-    ),
-  );
-}
-
-Widget whatsHot(BuildContext context) {
-  return Container(
-    child: Container(
-      height: MediaQuery.of(context).size.height / 1.44,
-      width: MediaQuery.of(context).size.width,
-      child: ListView(
-        children: [
-          verticalListItems(context),
-          verticalListItems(context),
-          verticalListItems(context),
-          verticalListItems(context)
         ],
       ),
     ),

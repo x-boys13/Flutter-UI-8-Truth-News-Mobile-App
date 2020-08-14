@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'screen10_news_categories_and_items.dart';
 
+// This is combination of three carousel screens which change the next button to finish on last screen.
 class CarousalScreen extends StatefulWidget {
   @override
   _CarousalScreenState createState() => _CarousalScreenState();
@@ -56,17 +57,6 @@ class _CarousalScreenState extends State<CarousalScreen> {
                     snackBarText = "You will recive notifications.";
                   });
                   Navigator.of(context).pop();
-                  // Navigator.of(context).push(MaterialPageRoute(
-                  //     builder: (context) => NewsItems(snackBarText)));
-
-                  // This sorks such that back button is not working
-                  // Navigator.pushAndRemoveUntil(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //       builder: (context) => NewsItems(snackBarText)),
-                  //   (Route<dynamic> route) => false,
-                  // );
-
                   Navigator.of(context).pushReplacement(new MaterialPageRoute(
                       builder: (BuildContext context) =>
                           NewsItems(snackBarText)));

@@ -1,9 +1,8 @@
 # flutter_ui_8_truth_new_mobile_app
 
 A new Flutter project.
-remove repeating code
-remoce code cmments from files and add comments for each section
-correct the snackbar
+
+
 
 ## Getting Started
 
