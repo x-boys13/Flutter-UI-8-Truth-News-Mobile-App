@@ -1,6 +1,16 @@
 # flutter_ui_8_truth_new_mobile_app
 
 This is another flutter Ui i made for a News app with the help of people can view news on the go with their mobile phones.<br>
+This UI is a part of a series of UI's i am building. Check other UI's clicking the link below.
+* [Flutter UI 1 Login UI](https://github.com/harshkumarkhatri/Flutter-UI-1-Login-UI)
+* [Flutter UI 2 Product Showcase UI](https://github.com/harshkumarkhatri/Product-Showcase-UI-Flutter)
+* [Flutter UI 3 Find Your Inspiration](https://github.com/harshkumarkhatri/Flutter-UI-3-Find-your-inspiration)
+* [Flutter UI 4 Looking for Places](https://github.com/harshkumarkhatri/Flutter-UI-4-Looking-for-Places)
+* [Flutter UI 5 Food Delivery UI](https://github.com/harshkumarkhatri/Flutter-UI-5-Food-delivery-app)
+* [Flutter UI 6 Actor Profile UI](https://github.com/harshkumarkhatri/Flutter-UI-6-Actor-Profiles-App)
+* [Flutter UI 7 Buying Frames UI](https://github.com/harshkumarkhatri/Flutter-UI-7-Buying-Frames)
+* [Flutter UI 8 New Mobile App UI](https://github.com/x-boys13/Flutter-UI-8-Truth-News-Mobile-App)
+
 **About the UI**:-<br>
 When you will open the app you will have a screen showing a login or register button. Clicking any of the button will take you to their respective screens. In the login screen, you can login with you registered id or with google or facebook(Not working yet as it is only UI).<br>
 On the register screen you can register with you mail and password.
